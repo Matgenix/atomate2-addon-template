@@ -2,6 +2,7 @@
 Example module of addon package.
 """
 
+
 def myfunc(a: int, b: int) -> int:
     """
     Example function in addon.
