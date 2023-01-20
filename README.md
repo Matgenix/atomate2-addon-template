@@ -1,4 +1,4 @@
-# atomate2-lammps
+# atomate2-addon-template
 
 This is an example add-on package for [atomate2](https://github.com/materialsproject/atomate2).
 
