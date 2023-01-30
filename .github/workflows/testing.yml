@@ -22,8 +22,7 @@ jobs:
       - name: Install dependencies & package
         run: |
           python -m pip install --upgrade pip
-          pip install .[strict,tests,dev]
-          pip install .
+          pip install -e .[strict,tests,dev]
 
       - name: Lint
         run: |
