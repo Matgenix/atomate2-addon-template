@@ -1,9 +1,12 @@
 [build-system]
-requires = ["flit_core >=3.2,<4", "versioningit ~= 1.0", "wheel"]
-build-backend = "flit_core.buildapi"
+requires = ["hatchling", "hatch-vcs >= 0.3.0"]
+build-backend = "hatchling.build"
 
-[tool.flit.module]
-name = "atomate2.myaddon"
+[tool.hatch.version]
+path = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
 
 [project]
 name = "atomate2-myaddon"
@@ -40,9 +43,9 @@ strict = ["atomate2[strict]"]
 [project.urls]
 repository = "https://github.com/matgenix/atomate2-addon-template"
 
-[tool.versioningit.vcs]
-method = "git"
-default-tag = "0.0.1"
+#[tool.versioningit.vcs]
+#method = "git"
+#default-tag = "0.0.1"
 
 [tool.isort]
 profile = "black"
