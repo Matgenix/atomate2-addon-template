@@ -3,7 +3,7 @@ requires = ["hatchling", "hatch-vcs >= 0.3.0"]
 build-backend = "hatchling.build"
 
 [tool.hatch.version]
-path = "vcs"
+source = "vcs"
 
 [tool.hatch.build.hooks.vcs]
 version-file = "_version.py"
@@ -42,10 +42,6 @@ strict = ["atomate2[strict]"]
 
 [project.urls]
 repository = "https://github.com/matgenix/atomate2-addon-template"
-
-#[tool.versioningit.vcs]
-#method = "git"
-#default-tag = "0.0.1"
 
 [tool.isort]
 profile = "black"
