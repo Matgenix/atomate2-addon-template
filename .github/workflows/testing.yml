@@ -2,6 +2,7 @@ name: testing
 
 on:
   push:
+    branches: [main]
 
   pull_request:
     branches: [main]
@@ -21,9 +22,9 @@ jobs:
 
       - name: Install dependencies & package
         run: |
-          python -m pip install --upgrade pip
-          pip install .[strict,tests,dev]
-          pip install .
+          python -m pip install --upgrade pip setuptools
+          pip freeze
+          pip install -e .[strict,tests,dev]
 
       - name: Lint
         run: |
